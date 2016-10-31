@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8" name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;valo&quot;}">
+  <meta charset="UTF-8" name="vaadin-version" content="7.7.0">
+ </head> 
+ <body> 
+  <vaadin-vertical-layout spacing width="30%" margin> 
+   <vaadin-horizontal-layout spacing _id="languageSelectorRow"> 
+    <vaadin-native-select caption="Original language" immediate _id="originalLanguageSelector" :middle :center> 
+     <option>Finnish</option> 
+     <option>Swedish</option> 
+     <option>English</option> 
+    </vaadin-native-select> 
+    <vaadin-native-select caption="Target language" immediate _id="targetLanguageSelector" :middle :center> 
+     <option>Finnish</option> 
+     <option>Swedish</option> 
+     <option>English</option> 
+    </vaadin-native-select> 
+   </vaadin-horizontal-layout> 
+   <vaadin-horizontal-layout spacing _id="wordInputRow"> 
+    <vaadin-text-field description="Original word" input-prompt="Original word" immediate _id="originalWordInput"></vaadin-text-field> 
+    <vaadin-vertical-layout _id="translationStack"> 
+     <vaadin-text-field description="Translation" input-prompt="Translation" immediate _id="translationInput"></vaadin-text-field> 
+    </vaadin-vertical-layout> 
+   </vaadin-horizontal-layout> 
+   <vaadin-button plain-text _id="addAlternateTranslationButton">
+     Add alternate translation 
+   </vaadin-button> 
+   <vaadin-button plain-text _id="saveButton">
+     Save 
+   </vaadin-button> 
+  </vaadin-vertical-layout>  
+ </body>
+</html>

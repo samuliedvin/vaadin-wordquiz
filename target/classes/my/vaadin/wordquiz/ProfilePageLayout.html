@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+ <head>  
+  <meta charset="UTF-8" name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;valo&quot;}">
+  <meta charset="UTF-8" name="vaadin-version" content="7.7.0">
+  <meta charset="UTF-8" name="package-mapping" content="com_vaadin_addon_charts:com.vaadin.addon.charts">
+ </head> 
+ <body> 
+  <vaadin-vertical-layout width="50%" margin> 
+   <vaadin-tab-sheet :middle :center> 
+    <tab caption="Main Page" icon="fonticon://FontAwesome/f0ac" selected> 
+     <vaadin-vertical-layout caption="Main page" spacing margin _id="profileMainView"> 
+      <vaadin-label style-name="welcomeLabel" width-auto height="48px" plain-text _id="welcomeLabel" :center>
+        Welcome, player *Username* 
+      </vaadin-label> 
+      <vaadin-native-select caption="Select language"> 
+       <option>English</option> 
+       <option>Swedish</option> 
+       <option>Finnish</option> 
+      </vaadin-native-select> 
+      <vaadin-button description="Take new quiz" plain-text _id="newQuizButton">
+        Take new quiz 
+      </vaadin-button> 
+     </vaadin-vertical-layout> 
+    </tab> 
+    <tab caption="Progress Chart" icon="fonticon://FontAwesome/f201"> 
+     <vaadin-vertical-layout caption="Progress chart" spacing margin _id="progressView"> 
+      <com_vaadin_addon_charts-chart _id="progressChart"></com_vaadin_addon_charts-chart> 
+     </vaadin-vertical-layout> 
+    </tab> 
+   </vaadin-tab-sheet> 
+  </vaadin-vertical-layout>  
+ </body>
+</html>

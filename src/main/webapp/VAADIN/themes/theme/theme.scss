@@ -1,0 +1,129 @@
+// If you edit this file you need to compile the theme. See README.md for details.
+
+/*
+// Global variable overrides. Must be declared before importing Valo.
+
+// Defines the plaintext font size, weight and family. Font size affects general component sizing.
+$v-font-size: 16px;
+$v-font-weight: 300;
+$v-font-family: "Open Sans", sans-serif;
+
+// Defines the border used by all components.
+$v-border: 1px solid (v-shade 0.7);
+$v-border-radius: 10px;
+
+// Affects the color of some component elements, e.g Button, Panel title, etc
+$v-background-color: hsl(210, 0%, 98%);
+// Affects the color of content areas, e.g  Panel and Window content, TextField input etc
+$v-app-background-color: $v-background-color;
+
+// Affects the visual appearance of all components
+$v-gradient: v-linear 8%;
+$v-bevel-depth: 50%;
+$v-shadow-opacity: 5%;
+
+// Defines colors for indicating status (focus, success, failure)
+$v-focus-color: valo-focus-color(); // Calculates a suitable color automatically
+$v-friendly-color: #2c9720;
+  $v-error-indicator-color: #ed473b;
+
+// For more information, see: https://vaadin.com/book/-/page/themes.valo.html
+// Example variants can be copy/pasted from https://vaadin.com/wiki/-/wiki/Main/Valo+Examples */
+
+$v-app-loading-text: "Wordquiz 0.1";
+
+$v-font-family: "Helvetica", sans-serif;
+$v-font-weight: 200;
+$v-font-weight--header: 400;
+$v-background-color: #fff;
+$v-focus-color: rgb(150,190,90);
+$v-luminance-threshold: 180;
+$v-border: 0px solid v-shade;
+$v-border-radius: 6px;
+$v-bevel: false;
+$v-gradient: false;
+$v-shadow: false;
+$v-textfield-bevel: false;
+$v-textfield-shadow: false;
+$v-link-text-decoration: false;
+$v-selection-overlay-padding-horizontal: 0;
+$v-selection-overlay-padding-vertical: 6px;
+$v-selection-item-height: 30px;
+$v-selection-item-border-radius: 0;
+$valo-menu-background-color: #eee;
+
+
+
+@import "../valo/valo.scss";
+
+.valo-test {
+  .v-button-primary.v-button-primary {
+    background: #fff;
+    border-color: $v-focus-color;
+    color: $v-focus-color;
+  }
+
+  .v-button-danger.v-button-danger {
+    background: #fff;
+    border-color: $v-error-indicator-color;
+    color: $v-error-indicator-color;
+  }
+
+  .v-slider-base:before,
+  .v-slider-base:after {
+    border: none !important;
+  }
+}
+
+@mixin theme {
+  @include valo;
+
+  .v-verticallayout {
+    display: block;
+    position: relative;
+    top: 30%;
+    left:50%;
+    transform: translate(-50%, 0%);
+    background: rgba(255,255,255,0.8);
+    border-radius: 5px;
+  }
+
+  .v-verticallayout-translationStack {
+    position: static;
+    background: none;
+    transform: translate(0);
+  }
+
+  .v-window {
+    background: rgba(255,255,255,0.8);
+    border-radius: 5px;
+  }
+
+  .v-ui {
+    background: url("img/bg.jpeg");
+    background-position: center;
+    background-size:cover;
+  }
+
+  .translationStack {
+    position: static;
+  }
+
+  .v-label-welcomeLabel {
+  	font-size: 32px;
+  }
+
+
+  .v-window-contents  > .v-scrollable:before {
+  	border-top: none;
+  }
+
+  .v-window-outerheader:after {
+  	border-top: none;
+  }
+
+  .v-window-closebox {
+  	background: none;
+  }
+
+}
